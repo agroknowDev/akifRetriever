@@ -9,9 +9,9 @@
 	<env-entry> 
 		<description>Absolute path to AKIF folder</description>
     	<env-entry-name>akif.dir</env-entry-name> 
-        <env-entry-value>/Users/dmssrt/tmp/transformer/AKIF</env-entry-value> 
-        <!--env-entry-value>/home/workflow/repository/AKIF</env-entry-value--> 
-        <env-entry-type>java.lang.String</env-entry-type> 
+	   <env-entry-type>java.lang.String</env-entry-type>
+      <!--env-entry-value>/Users/dmssrt/tmp/transformer/AKIF</env-entry-value--> 
+      <env-entry-value>/home/workflow/repository/AKIF</env-entry-value>  
     </env-entry> 
   
 	<servlet>
