@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<web-app id="WebApp_ID" version="2.4"  
+            xmlns="http://java.sun.com/xml/ns/j2ee"  
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+            xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee  
+                 http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">  
+   <display-name>AKIF Retriever</display-name>  
+  
+	<env-entry> 
+		<description>Absolute path to AKIF folder</description>
+    	<env-entry-name>akif.dir</env-entry-name> 
+        <env-entry-value>/Users/dmssrt/tmp/transformer/AKIF</env-entry-value> 
+        <!--env-entry-value>/home/workflow/repository/AKIF</env-entry-value--> 
+        <env-entry-type>java.lang.String</env-entry-type> 
+    </env-entry> 
+  
+	<servlet>
+    	<description>This Servlet  was added to support JSONP protocol to resolve cross domain scripting problem</description>
+      	<display-name>AKIFRetrieverServlet</display-name>
+      	<servlet-name>AKIFRetrieverServlet</servlet-name>
+      	<servlet-class>gr.agroknow.service.akifRetriever.AKIFRetrieverServlet</servlet-class>
+   	</servlet>
+   
+   <servlet-mapping>
+      <servlet-name>AKIFRetrieverServlet</servlet-name>
+      <url-pattern>/getAKIF</url-pattern>
+   </servlet-mapping>
+   
+</web-app>
